@@ -4,11 +4,11 @@
 +cc_library(
 +    name = "glm",
 +    hdrs = glob([
-+        "glm/**/*.h",
-+        "glm/**/*.hpp",
++        "**/*.h",
++        "**/*.hpp",
 +    ]),
 +    includes = ["."],
-+    textual_hdrs = glob(["glm/**/*.inl"]),
++    textual_hdrs = glob(["**/*.inl"]),
 +    visibility = ["//visibility:public"],
 +    include_prefix = "glm",
 +)
