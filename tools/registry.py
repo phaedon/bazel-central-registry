@@ -38,6 +38,7 @@ GREEN = "\x1b[32m"
 RESET = "\x1b[0m"
 
 PRESUBMIT_YML = "presubmit.yml"
+MODULE_DOT_BAZEL = "MODULE.bazel"
 
 
 def log(msg):
@@ -430,7 +431,7 @@ module(
         if module.presubmit_yml:
             shutil.copy(module.presubmit_yml, presubmit_yml)
         else:
-            PLATFORMS = ["debian10", "ubuntu2004", "macos", "macos_arm64", "windows"]
+            PLATFORMS = ["debian11", "ubuntu2204", "macos", "macos_arm64", "windows"]
             BAZEL_VERSIONS = ["8.x", "7.x", "6.x"]
             presubmit = {
                 "matrix": {
@@ -580,3 +581,10 @@ class ModuleSnapshot:
         raw = self._download_if_exists("attestations.json")
         if raw:
             return json.loads(raw)
+
+    def module_dot_bazel(self):
+        raw = self._download_if_exists(MODULE_DOT_BAZEL)
+        if not raw:
+            return None
+
+        return raw.decode("utf-8")

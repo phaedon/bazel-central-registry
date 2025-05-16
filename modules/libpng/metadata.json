@@ -4,7 +4,8 @@
         {
             "email": "julian.amann@tum.de",
             "github": "Vertexwahn",
-            "name": "Julian Amann"
+            "name": "Julian Amann",
+            "github_user_id": 3775001
         }
     ],
     "repository": [
@@ -19,7 +20,8 @@
         "1.6.44",
         "1.6.45",
         "1.6.46",
-        "1.6.47"
+        "1.6.47",
+        "1.6.47.bcr.1"
     ],
     "yanked_versions": {}
 }

@@ -4,7 +4,8 @@
         {
             "name": "helly25",
             "email": "marcus.boerger@gmail.com",
-            "github": "helly25"
+            "github": "helly25",
+            "github_user_id": 6420169
         }
     ],
     "repository": [
@@ -13,7 +14,9 @@
     "versions": [
         "0.1.1",
         "0.1.2",
-        "0.2.0"
+        "0.2.0",
+        "0.2.1",
+        "0.3.0"
     ],
     "yanked_versions": {}
 }
